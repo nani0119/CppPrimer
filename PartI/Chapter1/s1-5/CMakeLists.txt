@@ -26,3 +26,17 @@ target_link_libraries(E120_show_sales_items ${EXTRA_LIBS})
 # 指定安装的文件信息
 install(TARGETS E120_show_sales_items DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+
+set(E121_add_sales_items_FILE "E121_add_sales_items.cc")
+
+# 生成可执行文件
+add_executable(E121_add_sales_items ${E121_add_sales_items_FILE} ${Sales_item_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(E121_add_sales_items ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS E121_add_sales_items DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)

@@ -20,6 +20,7 @@ istream& operator>>(istream& is, Sales_item& item)
 Sales_item operator+(const Sales_item& lhs, const Sales_item& rhs)
 {
 	Sales_item item;
+	item.bookNo = lhs.bookNo;
 	item.revenue = lhs.revenue + rhs.revenue;
 	item.units_sold = lhs.units_sold + rhs.units_sold;
 	return item;

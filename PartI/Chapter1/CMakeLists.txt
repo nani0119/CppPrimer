@@ -7,10 +7,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/common)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/s1-2)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/s1-4)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/s1-5)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/s1-6)
 
 # 添加子目录
 add_subdirectory(common)
 add_subdirectory(s1-2)
 add_subdirectory(s1-4)
 add_subdirectory(s1-5)
+add_subdirectory(s1-6)
+
 
