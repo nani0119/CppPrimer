@@ -35,8 +35,8 @@ include_directories(${PROJECT_BINARY_DIR})
 # 检查对应选项是否打开
 if (BUILD_DEBUG_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
-    set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
-    set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+    set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -g -ggdb")
+    set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3")
 endif (BUILD_DEBUG_TYPE)
 
 # if (USE_MYMATH)

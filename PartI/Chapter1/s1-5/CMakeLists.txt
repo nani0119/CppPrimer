@@ -2,25 +2,28 @@ cmake_minimum_required(VERSION 3.2)
 
 set(MODULE_NAME S1-5)
 
+# 添加动态或者静态链接库路径
+link_directories(${PROJECT_BINARY_DIR}/PartI/Chapter1/common)
+
 # 添加链接库
-# set(EXTRA_LIBS ${EXTRA_LIBS} "pthread")
+set(EXTRA_LIBS ${EXTRA_LIBS} "libSales_item.a")
+# set(EXTRA_LIBS ${EXTRA_LIBS} "libSales_item.so")
 
 # 添加头文件路径
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # 获取全局属性
-get_property(Sales_item_FILE  GLOBAL PROPERTY "Sales_item_FILE") 
+# get_property(Sales_item_FILE  GLOBAL PROPERTY "Sales_item_FILE") 
 
 # ======================================================
 # 自动包含当前目录代码文件
 # aux_source_directory(. DIR_SRCS)
 set(E120_show_sales_items_FILE "E120_show_sales_items.cc")
-set(E120_show_sales_items_FILE ${E120_show_sales_items_FILE} ${Sales_item_FILE})
 
 # 生成可执行文件
 add_executable(E120_show_sales_items ${E120_show_sales_items_FILE})
 
-# 添加可执行文件使用的链接库
+# 链接库文件
 target_link_libraries(E120_show_sales_items ${EXTRA_LIBS})
 
 # 指定安装的文件信息
@@ -32,7 +35,7 @@ install(TARGETS E120_show_sales_items DESTINATION bin)
 set(E121_add_sales_items_FILE "E121_add_sales_items.cc")
 
 # 生成可执行文件
-add_executable(E121_add_sales_items ${E121_add_sales_items_FILE} ${Sales_item_FILE})
+add_executable(E121_add_sales_items ${E121_add_sales_items_FILE})
 
 # 添加可执行文件使用的链接库
 target_link_libraries(E121_add_sales_items ${EXTRA_LIBS})
