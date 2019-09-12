@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	vector<string> sv6(sv3);
 	vector<string> sv7(3);
 	vector<string> sv8(7, "hello");
+	vector<string> sv9(sv2.begin(), sv2.end());
 
 	/* add element */
 	vector<int> iv;
