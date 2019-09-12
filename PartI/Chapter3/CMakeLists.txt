@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-set(MODULE_NAME Chapter1)
+set(MODULE_NAME Chapter3)
 
 # 添加头文件路径
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/s3-2)
