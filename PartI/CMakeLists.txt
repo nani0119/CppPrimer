@@ -6,9 +6,11 @@ set(MODULE_NAME PartI)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Chapter1)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Chapter2)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Chapter3)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Chapter4)
 
 # 添加子目录
 add_subdirectory(Chapter1)
 add_subdirectory(Chapter2)
 add_subdirectory(Chapter3)
+add_subdirectory(Chapter4)
 
