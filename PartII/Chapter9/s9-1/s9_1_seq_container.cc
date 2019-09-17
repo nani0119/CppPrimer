@@ -130,5 +130,12 @@ int main(int argc, char *argv[])
 	}
 	cout << endl;
 
+	// container size management
+	cout << "c.capacity():" << vs.capacity() << endl;   // Number elememts c can have before reallocation is necessary
+
+	vs.shrink_to_fit();  // reduce capacity() to size()
+
+	vs.reserve(20);      // allocate space at least n elements
+	
 	return 0;
 }
