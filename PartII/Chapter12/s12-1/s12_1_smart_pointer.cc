@@ -62,5 +62,29 @@ int main(int argc, char *argv[])
 	cout << q.use_count() <<  "  " << q.unique() << endl;
 
 
+	// weak pointer, do not change reference
+	weak_ptr<string> w(ps);
+
+	cout<<"weak ptr:" << q.use_count() <<  "  " << q.unique()  << " "<<w.use_count()<< endl;
+	cout << "weak ptr:"<<w.expired() << endl;  // sp referece > 0
+	shared_ptr<string> sp_w = w.lock();
+	cout<<"weak ptr:" << sp_w.use_count() <<  "  " << sp_w.unique()  << " "<<ps.use_count()<< endl;
+	w.reset(); // make w null
+	cout<<"weak ptr:" << w.expired()<< endl;
+
+    // reset 
+	q.reset();   // subtract count of shared_ptr ps
+	cout << ps.use_count() <<  "  " << ps.unique() << endl;
+
+	q.reset(new string("qqqqqq"));
+	cout << p.use_count() <<  "  " << p.unique() << endl;
+
+
+	// define deleter
+	auto deleter = [](int* i ) -> void  {cout << "delete i = " <<*i<< endl; delete i;};
+	shared_ptr<int> pd(new int(42), deleter);
+	pd.reset(new int(40),deleter);
+
+
 	return 0;
 }
