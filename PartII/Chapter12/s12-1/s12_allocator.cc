@@ -27,5 +27,27 @@ int main(int argc, char *argv[])
 	}
 
 	alloc.deallocate(p, n);  
+
+
+	const int cnt = 20;
+	vector<string> vec = {"1111", "2222", "3333", "4444","5555"};
+	allocator<string> alc;
+	auto p_alc = alc.allocate(cnt);
+
+	auto q_alc = uninitialized_copy(vec.begin(), vec.end(), p_alc);
+	uninitialized_fill_n(q_alc, 2, "xxxxxxxxxx");
+	
+	q_alc = q_alc +2;
+
+	int i = 0;
+	while((p_alc + i) < q_alc)
+	{
+		cout << *(p_alc+i) << " ";
+		alc.destroy(p_alc + i);
+		i++;
+	}
+	cout << endl;
+	alc.deallocate(p_alc,cnt);
+
 	return 0;
 }
