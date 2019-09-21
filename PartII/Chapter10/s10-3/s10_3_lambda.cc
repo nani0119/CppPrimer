@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 	
 	size_t sz3 = 45;
 	size_t sz4 = 3;
-	auto fv = [=,sz4](){return sz3+sz4;};  // default value , sz4 reference
+	auto fv = [=,&sz4](){return sz3+sz4;};  // default value , sz4 reference
 	cout << fv() << endl;
 	display_split();
 
