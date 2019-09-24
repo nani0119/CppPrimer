@@ -50,11 +50,13 @@ endif (BUILD_DEBUG_TYPE)
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartI")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartII")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartIII")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartIV")
 
 #添加子目录
 add_subdirectory(PartI)
 add_subdirectory(PartII)
 add_subdirectory(PartIII)
+add_subdirectory(PartIV)
 # =============================================================
 
 #指定安装时使用的路径前缀
