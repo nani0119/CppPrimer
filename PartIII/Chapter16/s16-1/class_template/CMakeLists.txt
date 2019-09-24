@@ -4,9 +4,11 @@ set(MODULE_NAME class_template)
 
 # 添加头文件路径
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Blob)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/screen)
 
 # 添加子目录
 add_subdirectory(Blob)
+add_subdirectory(screen)
 
 
 # ======================================================
