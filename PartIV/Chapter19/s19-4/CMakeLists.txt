@@ -29,3 +29,18 @@ target_link_libraries(s19_4_pointer_to_class_member ${EXTRA_LIBS})
 # 指定安装的文件信息
 install(TARGETS s19_4_pointer_to_class_member DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s19_4_member_func_as_call_obj_FILE "member_func_as_call_obj.cc")
+
+# 生成可执行文件
+add_executable(s19_4_member_func_as_call_obj ${s19_4_member_func_as_call_obj_FILE})
+
+# 链接库文件
+target_link_libraries(s19_4_member_func_as_call_obj ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s19_4_member_func_as_call_obj DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
