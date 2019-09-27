@@ -51,12 +51,14 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartI")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartII")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartIII")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartIV")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/PartV")
 
 #添加子目录
 add_subdirectory(PartI)
 add_subdirectory(PartII)
 add_subdirectory(PartIII)
 add_subdirectory(PartIV)
+add_subdirectory(PartV)
 # =============================================================
 
 #指定安装时使用的路径前缀
