@@ -26,6 +26,21 @@ install(TARGETS s20_2_Thread_1_mutex DESTINATION bin)
 # ======================================================
 # 自动包含当前目录代码文件
 # aux_source_directory(. DIR_SRCS)
+set(s20_2_Thread_3_lock_FILE "Thread_3_lock.cc")
+
+# 生成可执行文件
+add_executable(s20_2_Thread_3_lock ${s20_2_Thread_3_lock_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_2_Thread_3_lock ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_2_Thread_3_lock DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
 set(s20_2_Thread_2_thread_safe_stack_FILE "Thread_2_thread_safe_stack.cc")
 
 # 生成可执行文件
