@@ -79,6 +79,8 @@ int main(int argc, char *argv[])
 	rhs.get_data().show_data();
 	// thread_guard t(thread(::swap, std::ref(lhs), std::ref(rhs)));
 	thread_guard t(thread(func, std::ref(lhs), std::ref(rhs)));
+	thread_guard t1(thread(func, std::ref(lhs), std::ref(rhs)));
+	thread_guard t2(thread(func, std::ref(lhs), std::ref(rhs)));
 	sleep(1);
 	lhs.get_data().show_data();
 	cout << endl;
