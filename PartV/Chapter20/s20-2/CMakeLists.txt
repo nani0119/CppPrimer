@@ -68,3 +68,48 @@ target_link_libraries(s20_2_Thread_4_hierarchy_lock ${EXTRA_LIBS})
 install(TARGETS s20_2_Thread_4_hierarchy_lock DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
 
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_2_Thread_5_unique_lock_FILE "Thread_5_unique_lock.cc")
+
+# 生成可执行文件
+add_executable(s20_2_Thread_5_unique_lock ${s20_2_Thread_5_unique_lock_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_2_Thread_5_unique_lock ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_2_Thread_5_unique_lock DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_2_Thread_6_unique_trans_FILE "Thread_6_unique_trans.cc")
+
+# 生成可执行文件
+add_executable(s20_2_Thread_6_unique_trans ${s20_2_Thread_6_unique_trans_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_2_Thread_6_unique_trans ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_2_Thread_6_unique_trans  DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_2_Thread_7_unique_unlock_FILE "Thread_7_unique_unlock.cc")
+
+# 生成可执行文件
+add_executable(s20_2_Thread_7_unique_unlock ${s20_2_Thread_7_unique_unlock_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_2_Thread_7_unique_unlock ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_2_Thread_7_unique_unlock  DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
