@@ -8,7 +8,7 @@
 using namespace std;
 
 
-class data
+class func_data
 {
 private:
 	int a = 0;
@@ -44,14 +44,15 @@ public:
 	void operator=(const thread_guard&) = delete;
 };
 
-void func(data& d)
+void func(func_data& d)
 {
 	d.process_data();
 	d.show_data();
+	return;
 }
 int main(int argc, char *argv[])
 {
-	data d;
+	func_data d;
 	thread_guard t1 (thread(func,std::ref(d)));
 	thread_guard t2 (thread(func,std::ref(d)));
 	thread_guard t3 (thread(func,std::ref(d)));

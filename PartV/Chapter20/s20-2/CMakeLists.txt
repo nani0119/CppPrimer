@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.2)
 
 set(MODULE_NAME S2)
 
+# 设置编译参数
+set(CMAKE_CXX_FLAGS "-std=c++17")	# for shared_mutex
+
 # 添加链接库
 set(EXTRA_LIBS ${EXTRA_LIBS} "pthread")
 
@@ -141,5 +144,21 @@ target_link_libraries(s20_2_Thread_9_class_call_once ${EXTRA_LIBS})
 
 # 指定安装的文件信息
 install(TARGETS s20_2_Thread_9_class_call_once  DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_2_Thread_10_share_lock_FILE "Thread_10_share_lock.cc")
+
+# 生成可执行文件
+add_executable(s20_2_Thread_10_share_lock ${s20_2_Thread_10_share_lock_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_2_Thread_10_share_lock ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_2_Thread_10_share_lock DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
 
