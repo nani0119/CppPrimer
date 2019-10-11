@@ -38,3 +38,18 @@ target_link_libraries(s20_3_Thread_2_condtion_notify_all ${EXTRA_LIBS})
 install(TARGETS s20_3_Thread_2_condtion_notify_all  DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
 
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_3_Thread_3_thread_safe_queue_FILE "Thread_3_thread_safe_queue.cc")
+
+# 生成可执行文件
+add_executable(s20_3_Thread_3_thread_safe_queue ${s20_3_Thread_3_thread_safe_queue_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_3_Thread_3_thread_safe_queue ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_3_Thread_3_thread_safe_queue  DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
