@@ -53,3 +53,33 @@ target_link_libraries(s20_3_Thread_3_thread_safe_queue ${EXTRA_LIBS})
 install(TARGETS s20_3_Thread_3_thread_safe_queue  DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
 
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_3_Thread_4_async_FILE "Thread_4_async.cc")
+
+# 生成可执行文件
+add_executable(s20_3_Thread_4_async ${s20_3_Thread_4_async_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_3_Thread_4_async ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_3_Thread_4_async  DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_3_Thread_5_packed_task_FILE "Thread_5_packed_task")
+
+# 生成可执行文件
+add_executable(s20_3_Thread_5_packed_task ${s20_3_Thread_5_packed_task_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_3_Thread_5_packed_task ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_3_Thread_5_packed_task DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
