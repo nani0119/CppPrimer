@@ -113,3 +113,18 @@ target_link_libraries(s20_3_Thread_7_exception ${EXTRA_LIBS})
 install(TARGETS s20_3_Thread_7_exception DESTINATION bin)
 # install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
 
+# ======================================================
+# 自动包含当前目录代码文件
+# aux_source_directory(. DIR_SRCS)
+set(s20_3_Thread_8_share_future_FILE "Thread_8_share_future.cc")
+
+# 生成可执行文件
+add_executable(s20_3_Thread_8_share_future ${s20_3_Thread_8_share_future_FILE})
+
+# 添加可执行文件使用的链接库
+target_link_libraries(s20_3_Thread_8_share_future ${EXTRA_LIBS})
+
+# 指定安装的文件信息
+install(TARGETS s20_3_Thread_8_share_future DESTINATION bin)
+# install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Demo.h" DESTINATION include)
+
