@@ -160,12 +160,12 @@ class constumer_helper
 		void operator()(threadsafe_stack<T>& stk)
 		{
 			auto f = [&](threadsafe_stack<T>& stk) -> void {
-																while(stk.size() > 2000)  \
-																	{stk.pop();}  \
-																thread_set.erase(this_thread::get_id()); \
-																thread_cnt++; \
-																cout << "exit thread <<<<<<<<<"<<endl; \
-															};
+										while(stk.size() > 2000)  \
+											{stk.pop();}  \
+										thread_set.erase(this_thread::get_id()); \
+										thread_cnt++; \
+										cout << "exit thread <<<<<<<<<"<<endl; \
+								       };
 			while(1)
 			{
 				auto sz = stk.size();
