@@ -20,7 +20,7 @@ list<T> sequential_quick_sort(std::list<T> input)
 	}
 
 	list<T> result;
-    result.splice(result.begin(), input, input.begin());
+	result.splice(result.begin(), input, input.begin());
 	const T& pivot = *(result.begin());
 
 	auto  pivot_point = std::partition(input.begin(), input.end(), [&](const T& t){return t < pivot;});
