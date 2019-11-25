@@ -106,7 +106,7 @@ future<bool> gui_process_event_one(threadsafe_queue<packaged_task<bool(int)>>& q
 	packaged_task<bool(int)> task;
 	q.wait_and_pop(task);
 	future<bool> ret = task.get_future();
-//	task(i);
+	task(i); // 如果不执行会崩溃
 	return ret;
 }
 
